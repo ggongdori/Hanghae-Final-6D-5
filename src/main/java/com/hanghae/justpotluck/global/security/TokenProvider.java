@@ -6,7 +6,9 @@ import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -19,6 +21,7 @@ import java.util.Date;
 public class TokenProvider {
 
     private final AppProperties appProperties;
+    private final CustomUserDetailsService userDetailsService;
     private final Long refreshTokenExpiry = 7 * 24 * 60 * 60 * 1000L; // 14 day
 //    private final Key key = appProperties.getAuth().getTokenSecret();
     private static final String AUTHORITIES_KEY = "role";
@@ -64,18 +67,36 @@ public class TokenProvider {
 
 
 
-    public Long getUserIdFromToken(String token) {
-        Claims claims = Jwts.parser()
-                .setSigningKey(appProperties.getAuth().getTokenSecret())
-                .parseClaimsJws(token)
-                .getBody();
+//    public Long getUserIdFromToken(String token) {
+//        Claims claims = Jwts.parser()
+//                .setSigningKey(appProperties.getAuth().getTokenSecret())
+//                .parseClaimsJws(token)
+//                .getBody();
+//
+//        return Long.parseLong(claims.getSubject());
+//    }
 
-        return Long.parseLong(claims.getSubject());
+    public Claims parseClaims(String token) {
+        try {
+            return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
+        } catch (ExpiredJwtException ex) {
+            return ex.getClaims();
+        }
+    }
+
+    public Authentication getAuthentication(String token) {
+        Claims claims = parseClaims(token);
+        UserDetails userDetails = userDetailsService.loadUserByUsername(claims.getSubject());
+        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
     public boolean validateToken(String authToken) {
         try {
-            Jwts.parser().setSigningKey(appProperties.getAuth().getTokenSecret()).parseClaimsJws(authToken);
+            Jwts.parserBuilder()
+                    .setSigningKey(key)
+                    .build()
+                    .parseClaimsJws(authToken)
+                    .getBody();
             return true;
         } catch (SignatureException ex) {
             log.error("Invalid JWT signature");

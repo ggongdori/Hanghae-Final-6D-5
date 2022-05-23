@@ -1,11 +1,12 @@
 package com.hanghae.justpotluck.global.security.oauth;
 
 
-import com.hanghae.justpotluck.global.exception.OAuth2AuthenticationProcessingException;
 import com.hanghae.justpotluck.domain.user.entity.AuthProvider;
 import com.hanghae.justpotluck.domain.user.entity.User;
 import com.hanghae.justpotluck.domain.user.repository.UserRepository;
+import com.hanghae.justpotluck.global.exception.OAuth2AuthenticationProcessingException;
 import com.hanghae.justpotluck.global.security.UserPrincipal;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;
@@ -18,6 +19,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
@@ -41,9 +43,10 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private OAuth2User processOAuth2User(OAuth2UserRequest oAuth2UserRequest, OAuth2User oAuth2User) {
 
         final String registrationId = oAuth2UserRequest.getClientRegistration().getRegistrationId();
+//        AuthProvider authProvider = AuthProvider.valueOf(oAuth2UserRequest.getClientRegistration().getRegistrationId().toUpperCase(Locale.ROOT));
 
         OAuth2UserInfo oAuth2UserInfo = OAuth2UserInfoFactory.getOAuth2UserInfo(registrationId, oAuth2User.getAttributes());
-
+        log.info(registrationId);
         if(!StringUtils.hasText(oAuth2UserInfo.getEmail())) {
             throw new OAuth2AuthenticationProcessingException("Email not found from OAuth2 provider");
         }

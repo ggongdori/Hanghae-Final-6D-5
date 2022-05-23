@@ -123,7 +123,7 @@ public class PostService {
                 () -> new RestException(HttpStatus.NOT_FOUND, "해당 postId가 존재하지 않습니다.")
         );
 
-        if (post.getUser().getName().equals(username)) {
+        if (post.getUser().getNickname().equals(username)) {
             post.update(requestDto);
         } else {
             throw new RestException(HttpStatus.BAD_REQUEST, "username이 일치하지 않습니다.");
@@ -136,7 +136,7 @@ public class PostService {
                 () -> new RestException(HttpStatus.NOT_FOUND, "해당 postId가 존재하지 않습니다.")
         );
 
-        if (post.getUser().getName().equals(username)) {
+        if (post.getUser().getNickname().equals(username)) {
             post.update(requestDto.getCategory());
         } else {
             throw new RestException(HttpStatus.BAD_REQUEST, "username이 일치하지 않습니다.");
