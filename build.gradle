@@ -20,15 +20,15 @@ repositories {
 
 dependencies {
     //s3
-    implementation 'io.awspring.cloud:spring-cloud-starter-aws:2.3.1'
+    implementation 'io.awspring.cloud:spring-cloud-starter-aws:2.4.1'
     //db
     implementation 'mysql:mysql-connector-java'
     // querydsl 추가
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
     implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
     //파일 관련
-    implementation 'commons-io:commons-io:2.5'
-    implementation 'commons-codec:commons-codec:1.5'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'commons-codec:commons-codec:1.15'
     //websocket
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     implementation 'org.webjars:sockjs-client:1.5.1'
@@ -48,8 +48,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     annotationProcessor 'org.projectlombok:lombok'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.5.2'
-    implementation 'io.springfox:springfox-swagger2:2.9.2'
-    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'io.springfox:springfox-swagger-ui:3.0.0'
     implementation group: 'ch.simas.qlrm', name: 'qlrm', version: '1.7.1'
     
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
