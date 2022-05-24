@@ -24,6 +24,7 @@ public class CommentController {
         return new ResponseEntity<>(new Success(true, "댓글 달기 성공"), HttpStatus.OK);
     }
 
+    //"/api/comment/{commentId}/recomment"
     @PostMapping("/api/comment/{postId}/{commentId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Success> reCommentSave(@PathVariable("postId") Long postId,
@@ -33,6 +34,7 @@ public class CommentController {
         return new ResponseEntity<>(new Success(true, "답글 달기 성공"), HttpStatus.OK);
     }
 
+    //"/api/comment/{commentId}/{recommentId}
     @PatchMapping("/api/comment/{postId}/{commentId}")
     public ResponseEntity<Success>  commentModify(@PathVariable("postId") Long postId,
                               @PathVariable("commentId") Long commentId, @RequestBody CommentUpdateDto requestDto){

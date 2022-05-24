@@ -18,7 +18,6 @@ public class PostResponseDto {
     private Long postId;
     private String title;
     private String content;
-    private String image;
     private String category;
     private LocalDateTime expiredAt;
     private String location;
@@ -30,12 +29,11 @@ public class PostResponseDto {
         this.postId = post.getPostId();
         this.title = post.getTitle();
         this.content = post.getContent();
-        this.image = post.getImage();
         this.category = post.getCategory();
         this.location = post.getLocation();
 //        this.createdAt = post.getCreatedAt();
 //        this.modifiedAt = post.getModifiedAt();
-        this.expiredAt = post.getExpiredAt();
+//        this.expiredAt = post.getExpiredAt();
         this.commentList = post.getCommentList();
     }
 

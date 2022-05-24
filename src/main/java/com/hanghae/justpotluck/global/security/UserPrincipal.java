@@ -16,13 +16,18 @@ import java.util.Map;
 
 @Getter
 public class UserPrincipal implements OAuth2User, UserDetails {
+//    private User user;
     private Long id;
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
+    private User user;
     @Setter
     private Map<String, Object> attributes;
 
+    public User getUser() {
+        return user;
+    }
     public UserPrincipal(Long id, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.email = email;

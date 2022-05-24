@@ -1,12 +1,14 @@
 package com.hanghae.justpotluck.domain.user.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hanghae.justpotluck.domain.board.entity.Board;
+import com.hanghae.justpotluck.domain.comment.entity.Comments;
+import com.hanghae.justpotluck.domain.community.entity.Posts;
+import com.hanghae.justpotluck.domain.user.dto.request.UserUpdateRequest;
 import com.hanghae.justpotluck.global.audit.AuditListener;
 import com.hanghae.justpotluck.global.audit.Auditable;
 import com.hanghae.justpotluck.global.audit.TimeEntity;
-import com.hanghae.justpotluck.domain.comment.entity.Comments;
-import com.hanghae.justpotluck.domain.community.entity.Posts;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -61,6 +63,9 @@ public class User implements Auditable {
     private TimeEntity timeEntity;
 
     @OneToMany(mappedBy = "user", cascade = ALL, orphanRemoval = true)
+    private List<Board> boardList;
+
+    @OneToMany(mappedBy = "user", cascade = ALL, orphanRemoval = true)
     private List<Posts> postList;
 
     @OneToMany(mappedBy = "user", cascade = ALL, orphanRemoval = true)
@@ -95,4 +100,9 @@ public class User implements Auditable {
     }
 
     public void addPost(Posts post) {this.postList.add(post);}
+
+    public void update(UserUpdateRequest updateRequest) {
+        this.email = email;
+        this.name = name;
+    }
 }

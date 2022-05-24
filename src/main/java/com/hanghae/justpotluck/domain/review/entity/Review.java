@@ -1,10 +1,10 @@
 package com.hanghae.justpotluck.domain.review.entity;
 
 
-import com.hanghae.justpotluck.global.config.Timestamped;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.hanghae.justpotluck.domain.board.entity.Board;
 import com.hanghae.justpotluck.domain.board.entity.Image;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.hanghae.justpotluck.global.config.Timestamped;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +24,7 @@ public class Review extends Timestamped {
     private Long id;
 
     private String contents;
+//    private User user;
     private String nickname;
 
     @JsonBackReference

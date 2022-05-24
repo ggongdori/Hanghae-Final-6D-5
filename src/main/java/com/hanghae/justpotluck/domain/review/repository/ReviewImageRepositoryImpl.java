@@ -6,8 +6,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-import static com.example.sparta.hanghaefinal.domain.entity.review.QReview.review;
-import static com.example.sparta.hanghaefinal.domain.entity.review.QReviewImage.reviewImage;
+import static com.hanghae.justpotluck.domain.review.entity.QReview.review;
+import static com.hanghae.justpotluck.domain.review.entity.QReviewImage.reviewImage;
 
 
 @RequiredArgsConstructor

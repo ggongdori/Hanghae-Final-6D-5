@@ -1,7 +1,6 @@
 package com.hanghae.justpotluck.global.exception;
 
 
-import com.example.sparta.hanghaefinal.advice.exception.*;
 import com.hanghae.justpotluck.global.result.Result;
 import com.hanghae.justpotluck.global.response.ResponseService;
 import lombok.RequiredArgsConstructor;

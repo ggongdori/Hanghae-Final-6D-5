@@ -35,7 +35,7 @@ public class HttpCookieOAuth2AuthorizationRequestRepository implements Authoriza
         CookieUtils.addCookie(response, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME, CookieUtils.serialize(authorizationRequest), cookieExpireSeconds);
 
         /*
-         * http://localhost:8080/oauth2/authorize/naver?redirect_uri=http://localhost:3000/oauth/redirect 로 요청 받았을 때
+         * http://localhost:8080/oauth2/authorize/kakao?redirect_uri=http://localhost:3000/oauth/redirect 로 요청 받았을 때
          * http://localhost:3000/oauth/redirect 를 가져온다
          * 그리고 존재하는 경우 cookie 에 넣어준다
          */

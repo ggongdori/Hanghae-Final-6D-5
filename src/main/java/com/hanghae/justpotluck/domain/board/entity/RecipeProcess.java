@@ -1,13 +1,11 @@
 package com.hanghae.justpotluck.domain.board.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -17,7 +15,9 @@ public class RecipeProcess {
     @Id
     private Long id;
 
+    @JsonBackReference
     @ManyToOne
+    @JoinColumn(name = "board_id")
     private Board board;
 
     @Column

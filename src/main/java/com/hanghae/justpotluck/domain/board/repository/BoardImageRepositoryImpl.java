@@ -7,8 +7,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-import static com.example.sparta.hanghaefinal.domain.entity.board.QBoard.board;
-import static com.example.sparta.hanghaefinal.domain.entity.board.QImage.image1;
+import static com.hanghae.justpotluck.domain.board.entity.QBoard.board;
+import static com.hanghae.justpotluck.domain.board.entity.QImage.image;
 
 
 @RequiredArgsConstructor
@@ -18,8 +18,8 @@ public class BoardImageRepositoryImpl implements BoardImageRepositoryCustom{
     @Override
     public List<Image> findBySavedImageUrl(Long boardId) {
         return queryFactory
-                .selectFrom(image1)
-                .innerJoin(image1.board, board)
+                .selectFrom(image)
+                .innerJoin(image.board, board)
                 .where(board.id.eq(boardId))
                 .fetch();
     }
