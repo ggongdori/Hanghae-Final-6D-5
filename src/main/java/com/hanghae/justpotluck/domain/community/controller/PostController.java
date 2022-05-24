@@ -74,7 +74,7 @@ public class PostController {
                 throw new RestException(HttpStatus.BAD_REQUEST, error.getDefaultMessage());
             }
         }
-        postService.modify(postId, requestDto, user.getName());
+        postService.modify(postId, requestDto, user.getNickname());
         return new ResponseEntity<>(new Success(true, "게시글 수정 성공"), HttpStatus.OK);
     }
 
@@ -86,7 +86,7 @@ public class PostController {
                 throw new RestException(HttpStatus.BAD_REQUEST, error.getDefaultMessage());
             }
         }
-        postService.modify(postId, requestDto, user.getName());
+        postService.modify(postId, requestDto, user.getNickname());
         return new ResponseEntity<>(new Success(true, "나눔 완료"), HttpStatus.OK);
     }
 }

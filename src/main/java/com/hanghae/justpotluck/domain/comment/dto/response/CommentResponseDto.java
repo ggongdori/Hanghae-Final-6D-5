@@ -31,7 +31,7 @@ public class CommentResponseDto {
     public static CommentResponseDto convertCommentToDto(Comments comment) {
         return comment.isRemoved() == true ?
                 new CommentResponseDto(comment.getCommentId(), "삭제된 댓글입니다.", null) :
-                new CommentResponseDto(comment.getCommentId(), comment.getContent(), comment.getUser().getName());
+                new CommentResponseDto(comment.getCommentId(), comment.getContent(), comment.getUser().getNickname());
     }
 
 }
