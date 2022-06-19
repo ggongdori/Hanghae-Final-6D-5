@@ -22,15 +22,6 @@ public class IngredientController {
     public IngredientResponse saveIngredient(@RequestBody IngredientSaveRequest requestDto, @PathVariable Long boardId) {
         return ingredientService.saveIngredient(requestDto, boardId);
     }
-//    @PostMapping("/ingredient/include")
-//    public List<IngredientResponse> saveIngredientSearch(@RequestBody IngredientRequestDto requestDto) {
-//        return ingredientService.saveIngredientSearch(requestDto);
-//    }
-//    @PostMapping("/ingredient/exclude")
-//    public List<IngredientResponse> saveIngredientSearch2(@RequestBody IngredientRequestDto requestDto) {
-//        return ingredientService.saveIngredientSearch(requestDto);
-//    }
-
 
     @PatchMapping("/board/ingredient/{ingredientId}")
     public ResponseEntity<IngredientResponse> updateProcess(@RequestBody IngredientUpdateRequestDto requestDto,
