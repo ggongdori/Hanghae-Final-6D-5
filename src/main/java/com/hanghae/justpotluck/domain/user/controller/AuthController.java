@@ -25,22 +25,6 @@ public class AuthController {
     @Autowired
     private TokenProvider tokenProvider;
 
-//    @PostMapping("/login")
-//    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-//
-//        Authentication authentication = authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                        loginRequest.getEmail(),
-//                        loginRequest.getPassword()
-//                )
-//        );
-//
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-//
-//        String token = tokenProvider.createTokenResponse(authentication).getAccessToken();
-//        return ResponseEntity.ok(new AuthResponse(token));
-//    }
-
 //    @PostMapping("/signup")
 //    public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
 //        if(userRepository.existsByEmail(signUpRequest.getEmail())) {

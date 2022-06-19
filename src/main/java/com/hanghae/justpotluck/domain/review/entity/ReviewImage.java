@@ -26,13 +26,6 @@ public class ReviewImage extends Timestamped {
     private String storeFileName;
     private String image;
 
-    //    @Builder
-//    public Image(String origFileName, String filePath, Long fileSize) {
-//        this.origFileName = origFileName;
-//        this.filePath = filePath;
-//        this.fileSize = fileSize;
-//    }
-
     @Builder
     public ReviewImage(String imageUrl, String storeFileName, Review review) {
         this.imageUrl = imageUrl;
@@ -44,8 +37,6 @@ public class ReviewImage extends Timestamped {
         this.review = review;
         this.image = image;
     }
-
-//    private String image;
 
     public void setReview(Review review) {
         this.review = review;
