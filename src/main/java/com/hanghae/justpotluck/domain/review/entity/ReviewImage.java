@@ -17,11 +17,6 @@ public class ReviewImage extends Timestamped {
     @Column(name = "review_image_id")
     private Long id;
 
-//    @JsonBackReference
-//    @ManyToOne
-//    @JoinColumn(name = "board_id")
-//    private Board board;
-
     @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "review_id")
@@ -30,10 +25,6 @@ public class ReviewImage extends Timestamped {
     private String imageUrl;
     private String storeFileName;
     private String image;
-
-//    private String origFileName;
-//    private String filePath;
-//    private Long fileSize;
 
     //    @Builder
 //    public Image(String origFileName, String filePath, Long fileSize) {
