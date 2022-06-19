@@ -21,8 +21,4 @@ public class ReviewUpdateRequestDto {
 
     private List<MultipartFile> images = new ArrayList<>();
 
-//    @Builder
-//    public ReviewUpdateRequestDto(String contents) {
-//        this.contents = contents;
-//    }
 }
