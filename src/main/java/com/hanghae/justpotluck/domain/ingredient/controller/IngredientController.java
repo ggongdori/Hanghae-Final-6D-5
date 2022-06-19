@@ -17,11 +17,6 @@ import org.springframework.web.bind.annotation.*;
 public class IngredientController {
 
     private final IngredientService ingredientService;
-//
-//    @PostMapping("/{boardId}/ingredient")
-//    public IngredientResponse saveIngredient(@RequestBody IngredientSaveRequest requestDto, @PathVariable Long boardId) {
-//        return ingredientService.saveIngredient(requestDto, boardId);
-//    }
 
     @PostMapping("/board/{boardId}/ingredient")
     public IngredientResponse saveIngredient(@RequestBody IngredientSaveRequest requestDto, @PathVariable Long boardId) {
