@@ -42,12 +42,6 @@ public class UserController {
         return ResponseEntity.ok(UserResponse.toUserResponse(userService.locationUpdate(userLocationUpdateRequestDto)));
     }
 
-//    @PostMapping("/user/info")
-//    public UserResponse userInfo() {
-//        return UserResponse.toUserResponse(userService.getUser());
-//    }
-
-
     @PatchMapping("/user/me/edit")
     public ResponseEntity<UserResponse> update(@RequestBody @Valid UserUpdateRequest userUpdateRequest) {
         return ResponseEntity.ok(UserResponse.toUserResponse(userService.update(userUpdateRequest)));
