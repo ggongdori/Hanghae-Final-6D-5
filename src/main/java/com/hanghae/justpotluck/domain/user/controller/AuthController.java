@@ -25,11 +25,6 @@ public class AuthController {
     @Autowired
     private TokenProvider tokenProvider;
 
-//
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
-//
-//        User result = userRepository.save(user);
-//
 //        URI location = ServletUriComponentsBuilder
 //                .fromCurrentContextPath().path("/user/me")
 //                .buildAndExpand(result.getId()).toUri();
