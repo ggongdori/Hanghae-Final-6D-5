@@ -25,12 +25,4 @@ public class AuthController {
     @Autowired
     private TokenProvider tokenProvider;
 
-//        URI location = ServletUriComponentsBuilder
-//                .fromCurrentContextPath().path("/user/me")
-//                .buildAndExpand(result.getId()).toUri();
-//
-//        return ResponseEntity.created(location)
-//                .body(new ApiResponse(true, "User registered successfully@"));
-//    }
-
 }
