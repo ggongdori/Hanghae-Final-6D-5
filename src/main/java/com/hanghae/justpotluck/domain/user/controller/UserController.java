@@ -73,10 +73,4 @@ public class UserController {
         return ResponseEntity.ok(userService.findMyBookmark(pageable));
     }
 
-//
-//    @GetMapping("/user/mypage")
-//    public ResponseEntity<UserResponse> update(@RequestBody @Valid UserUpdateRequest updateRequest) {
-//        return ResponseEntity.ok(UserResponse.toUserResponse(userService.update(updateRequest)));
-//    }
-
 }
