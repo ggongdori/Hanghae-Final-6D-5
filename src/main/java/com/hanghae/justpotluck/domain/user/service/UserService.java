@@ -130,17 +130,6 @@ public class UserService {
         }
         return listMyBoard;
     }
-//    public Page<MyBoardResponse> findMyBoard(Pageable pageable) {
-//        User user = userUtil.findCurrentUser();
-//        Page<Board> board = boardRepository.findByUserOrderByIdDesc(user, pageable);
-//
-//        List<MyBoardResponse> boardResponses =
-//                board.stream()
-//                        .map(MyBoardResponse::toMyBoardResponse)
-//                        .collect(Collectors.toList());
-//
-//        return new PageImpl<>(boardResponses, pageable, board.getTotalElements());
-//    }
 
     public Page<MyBookmarkResponse> findMyBookmark(Pageable pageable) {
         User user = userUtil.findCurrentUser();
