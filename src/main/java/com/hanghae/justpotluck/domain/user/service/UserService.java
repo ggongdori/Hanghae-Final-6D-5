@@ -212,13 +212,4 @@ public class UserService {
         return true;
     }
 
-
-//        List<MyCommentResponse> commentResponses =
-//                comments.stream()
-//                        .map(MyCommentResponse::toMyCommentResponse)
-//                        .collect(Collectors.toList());
-//
-//        return new PageImpl<>(commentResponses, pageable, comments.getTotalElements());
-//    }
-
 }
