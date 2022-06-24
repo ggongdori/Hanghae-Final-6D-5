@@ -20,11 +20,6 @@ public class ProcessController {
     private final RecipeProcessService processService;
     private final BoardService boardService;
 
-//    @PostMapping("/{boardId}/process")
-//    public ProcessResponseDto saveProcess(@ModelAttribute ProcessSaveRequest requestDto, @PathVariable Long boardId) {
-//        return processService.saveProcess(requestDto, boardId);
-//    }
-
     @PostMapping("/{boardId}/process")
     public ProcessResponseDto saveProcess(@ModelAttribute ProcessSaveRequest requestDto, @PathVariable Long boardId) {
         return processService.saveProcess(requestDto, boardId);
