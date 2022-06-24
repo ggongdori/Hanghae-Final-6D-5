@@ -73,12 +73,6 @@ public class UserController {
         return ResponseEntity.ok(userService.findMyBookmark(pageable));
     }
 
-//    //home 관련
-//    @GetMapping("/home")
-//    public ResponseEntity
-
-//    @GetMapping("/user/me/board")
-
 //
 //    @GetMapping("/user/mypage")
 //    public ResponseEntity<UserResponse> update(@RequestBody @Valid UserUpdateRequest updateRequest) {
