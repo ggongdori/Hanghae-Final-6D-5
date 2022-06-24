@@ -213,11 +213,6 @@ public class UserService {
     }
 
 
-
-//    public Page<MyCommentResponse> findMyComments(Pageable pageable) {
-//        User user = userUtil.findCurrentUser();
-//        Page<Comment> comments = commentRepository.findByUserOrderByIdDesc(user, pageable);
-//
 //        List<MyCommentResponse> commentResponses =
 //                comments.stream()
 //                        .map(MyCommentResponse::toMyCommentResponse)
