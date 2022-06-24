@@ -225,17 +225,5 @@ public class UserService {
 //
 //        return new PageImpl<>(commentResponses, pageable, comments.getTotalElements());
 //    }
-//
-//    public Page<MyBookmarkResponse> findMyScraps(Pageable pageable) {
-//        User user = userUtil.findCurrentUser();
-//        Page<Scrap> scraps = scrapRepository.findByUserOrderByIdDesc(user, pageable);
-//
-//        List<MyScrapResponse> scrapResponses =
-//                scraps.stream()
-//                        .map(MyScrapResponse::toMyScrapResponse)
-//                        .collect(Collectors.toList());
-//
-//        return new PageImpl<>(scrapResponses, pageable, scraps.getTotalElements());
-//    }
 
 }
