@@ -238,18 +238,4 @@ public class UserService {
 //        return new PageImpl<>(scrapResponses, pageable, scraps.getTotalElements());
 //    }
 
-
-
-//    @Transactional
-//    public User update(UserUpdateRequest userUpdateRequest) {
-//        User user = userUtil.findCurrentUser();
-//        // 닉네임 중복 확인
-//        if (userRepository.existsByNickname(userUpdateRequest.getNickname())) {
-//            throw new CustomException(ErrorCode.ALREADY_NICKNAME_EXISTS);
-//        }
-//
-//        user.update(userUpdateRequest);
-//        return user;
-//    }
-
 }
