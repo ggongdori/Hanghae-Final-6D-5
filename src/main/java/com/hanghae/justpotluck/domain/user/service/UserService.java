@@ -114,21 +114,6 @@ public class UserService {
 
         return new PageImpl<>(postResponses, pageable, post.getTotalElements());
     }
-//    @Transactional
-//    public List<PostListResponse> findMyPost(Pageable pageable) {
-//        User user = userUtil.findCurrentUser();
-//        List<BoardListResponse> listMyBoard = new ArrayList<>();
-//        Page<Board> boards = boardRepository.findByUserOrderByIdDesc(user, pageable);
-//
-//        for (Board board : boards) {
-//            List<String> boardImages = boardImageRepository.findBySavedImageUrl(board.getId())
-//                    .stream()
-//                    .map(image ->image.getImageUrl())
-//                    .collect(Collectors.toList());
-//            listMyBoard.add(new BoardListResponse(board, boardImages));
-//        }
-//        return listMyBoard;
-//    }
 
     @Transactional
     public List<BoardListResponse> findMyBoard(Pageable pageable) {
