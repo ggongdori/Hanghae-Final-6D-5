@@ -92,12 +92,6 @@ public class UserService {
             throw new CustomException(ErrorCode.ALREADY_NICKNAME_EXISTS);
         }
 
-//        String imageUrl = s3Uploader.upload(userUpdateRequest.getProfileImage(), "profile");
-
-//        // 이메일 중복 확인
-//        if (userRepository.existsByEmail(userUpdateRequest.getEmail())) {
-//            throw new CustomException(ErrorCode.ALREADY_EMAIL_EXISTS);
-//        }
         user.update(userUpdateRequest);
         return user;
     }
