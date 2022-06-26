@@ -75,9 +75,6 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         redisTemplate.opsForValue()
                 .set("RT:" + userInfo.getEmail(), tokenResponse.getRefreshToken(), tokenResponse.getRefreshTokenExpireDate(), TimeUnit.MILLISECONDS);
-//        String accessToken = tokenProvider.createAccessToken(authentication);
-//        String refreshToken = tokenProvider.createRefreshToken(authentication);
-
         int cookieMaxAge = (int) tokenResponse.getRefreshTokenExpireDate() / 60;
         CookieUtils.deleteCookie(request, response, REFRESH_TOKEN);
         CookieUtils.addCookie(response, REFRESH_TOKEN, tokenResponse.getRefreshToken(), cookieMaxAge);
