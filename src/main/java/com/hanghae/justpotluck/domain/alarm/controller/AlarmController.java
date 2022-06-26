@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class AlarmController {
-//    private final UserPrincipal userPrincipal;
     private final AlarmService alarmService;
 
     /* 알림 읽음 확인 */
