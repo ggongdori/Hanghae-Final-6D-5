@@ -39,12 +39,6 @@ public class RecipeProcess {
     @JoinColumn(name = "board_id")
     private Board board;
 
-//    @JsonBackReference
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
-
-
     @Builder
     public RecipeProcess(Long id, String process, Board board) {
         this.id = id;
