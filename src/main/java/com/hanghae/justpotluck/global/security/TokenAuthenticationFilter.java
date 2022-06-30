@@ -54,18 +54,4 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         return null;
     }
 
-//        } catch (Exception ex) {
-//            logger.error("Could not set user authentication in security context", ex);
-//        }
-//
-//        filterChain.doFilter(request, response);
-//    }
-//
-//    public static String getJwtFromRequest(HttpServletRequest request) {
-//        String bearerToken = request.getHeader(HttpHeaders.AUTHORIZATION);
-//        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
-//            return bearerToken.substring(7);
-//        }
-//        return null;
-//    }
 }
