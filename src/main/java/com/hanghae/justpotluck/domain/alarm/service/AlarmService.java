@@ -87,10 +87,7 @@ public class AlarmService {
         }
         return alarmDto;
     }
-//    public List<AlarmResponseDto> getAlamList(User user) {
-//        String userName = user.getName();
-//
-//
+
 //        List<Alarm> alarmListPage = alarmRepository
 //                .findAllByUserIdOrderByIdDesc(userName).getContent();
 //
