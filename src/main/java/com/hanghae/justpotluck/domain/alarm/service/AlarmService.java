@@ -55,16 +55,6 @@ public class AlarmService {
                 .postId(alarm.getPostId())
                 .build();
 
-        /*-
-         * redis로 알림메시지 pub, alarmRepository에 저장
-         * 단, 게시글 작성자와 댓글 작성자가 일치할 경우는 제외
-         */
-//        if (!alarmResponseDto.getAlarmTargetId().equals(user.getId())) {
-//            alarmRepository.save(alarm);
-//            redisTemplate.convertAndSend(channelTopic.getTopic(),
-//                    alarmResponseDto);
-//        }
-
     }
 
     //뒷부분에 커뮤니티 알림도 해야함..//
