@@ -63,7 +63,6 @@ public class TokenProvider {
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(now.getTime() + refreshTokenExpiry))
                 .signWith(key, SignatureAlgorithm.HS512)
-//                .signWith(SignatureAlgorithm.HS512, appProperties.getAuth().getTokenSecret())
                 .compact();
 
         log.info("리프레시 토큰 = {}", refreshToken);
