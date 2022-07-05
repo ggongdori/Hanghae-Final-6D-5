@@ -58,18 +58,6 @@ public class AlarmService {
     }
 
 //
-//        /* 알림 메시지를 보낼 DTO 생성 */
-//        AlarmResponseDto alarmResponseDto = AlarmResponseDto.builder()
-//                .alarmId(alarm.getId())
-//                .type(alarm.getType().toString())
-//                .message("[알림] ["
-//                        + board.getTitle()
-//                        + "] 커뮤니티에 댓글이 등록되었습니다. 확인해보세요.")
-//                .alarmTargetId(postOwner.getId())
-//                .isRead(alarm.getIsRead())
-//                .postId(alarm.getPostId())
-//                .build();
-//
 //        /*-
 //         * redis로 알림메시지 pub, alarmRepository에 저장
 //         * 단, 게시글 작성자와 댓글 작성자가 일치할 경우는 제외
