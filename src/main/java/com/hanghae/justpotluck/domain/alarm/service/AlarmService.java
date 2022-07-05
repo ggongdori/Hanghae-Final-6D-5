@@ -57,17 +57,6 @@ public class AlarmService {
 
     }
 
-    //뒷부분에 커뮤니티 알림도 해야함..//
-//    public void generateNewReplyCommunityAlarm(User postOwner, User user, Posts post) {
-//        Alarm alarm = Alarm.builder()
-//                .userId(postOwner.getId())
-//                .type(AlarmType.recipe_comment)
-//                .postId(post.getId())
-//                .isRead(false)
-//                .alarmMessage("[알림] ["
-//                        + post.getTitle()
-//                        + "] 커뮤니티에 댓글이 등록되었습니다. 확인해보세요.")
-//                .build();
 //
 //        /* 알림 메시지를 보낼 DTO 생성 */
 //        AlarmResponseDto alarmResponseDto = AlarmResponseDto.builder()
