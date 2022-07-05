@@ -47,8 +47,6 @@ public class TokenProvider {
     }
 
     public TokenResponse createTokenResponse(String email) {
-//        UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
-
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + appProperties.getAuth().getTokenExpirationMsec());
 
