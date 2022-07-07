@@ -88,10 +88,6 @@ public class AlarmService {
         return alarmDto;
     }
 
-//        List<Alarm> alarmListPage = alarmRepository
-//                .findAllByUserIdOrderByIdDesc(userName).getContent();
-//
-//        List<AlarmResponseDto> alarmResponseDtoList = new ArrayList<>();
 //
 //        for (Alarm alarm : alarmListPage) {
 //            /* 게시물에 새로운 댓글이 등록되었을 때 */
