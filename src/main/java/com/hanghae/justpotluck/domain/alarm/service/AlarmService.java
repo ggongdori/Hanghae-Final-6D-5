@@ -88,13 +88,6 @@ public class AlarmService {
         return alarmDto;
     }
 
-//                        .type(alarm.getType().toString())
-//                        .message(alarm.getAlarmMessage())
-//                        .isRead(alarm.getIsRead())
-//                        .postId(alarm.getPostId())
-//                        .build();
-//                alarmResponseDtoList.add(alarmDto);
-//            }
 //
 //        }
 //    return alarmResponseDtoList;
