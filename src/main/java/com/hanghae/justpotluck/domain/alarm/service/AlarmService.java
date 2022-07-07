@@ -88,12 +88,6 @@ public class AlarmService {
         return alarmDto;
     }
 
-//
-//        for (Alarm alarm : alarmListPage) {
-//            /* 게시물에 새로운 댓글이 등록되었을 때 */
-//            if (alarm.getType().equals(AlarmType.recipe_comment)) {
-//                AlarmResponseDto alarmDto = AlarmResponseDto.builder()
-//                        .alarmId(alarm.getId())
 //                        .type(alarm.getType().toString())
 //                        .message(alarm.getAlarmMessage())
 //                        .isRead(alarm.getIsRead())
