@@ -69,7 +69,6 @@ public class AlarmService {
                     .postId(alarm.getPostId())
                     .build();
         }
-
         else if (alarm.getType().equals(AlarmType.community_comment)) {
             alarmDto = AlarmResponseDto.builder()
                     .alarmId(alarm.getId())
