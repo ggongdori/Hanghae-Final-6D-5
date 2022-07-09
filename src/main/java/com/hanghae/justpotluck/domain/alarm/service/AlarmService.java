@@ -13,9 +13,6 @@ import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
 public class AlarmService {
     private final AlarmRepository alarmRepository;
@@ -56,7 +53,6 @@ public class AlarmService {
                 .build();
 
     }
-
     /* 알림 읽었을 경우 체크 */
     @Transactional
     public AlarmResponseDto alarmReadCheck(Long alarmId,
