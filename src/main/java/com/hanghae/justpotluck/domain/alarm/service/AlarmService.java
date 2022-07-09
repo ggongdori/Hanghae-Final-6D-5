@@ -26,7 +26,6 @@ public class AlarmService {
         this.redisTemplate = redisTemplate;
         this.channelTopic = channelTopic;
     }
-
     /* 게시물에 댓글이 등록되었을 경우 알림 보내기 */
     public static void generateNewReplyRecipeAlarm(User postOwner, User user, Board board) {
         Alarm alarm = Alarm.builder()
