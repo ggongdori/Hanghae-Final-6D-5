@@ -18,7 +18,6 @@ public class AlarmController {
     public AlarmResponseDto alarmReadCheck(
             @PathVariable Long alarmId,
             @AuthenticationPrincipal UserPrincipal userDetails) {
-
         return alarmService.alarmReadCheck(alarmId, userDetails);
     }
 }
