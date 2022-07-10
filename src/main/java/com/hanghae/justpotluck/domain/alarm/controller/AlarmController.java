@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AlarmController {
     private final AlarmService alarmService;
-
     /* 알림 읽음 확인 */
     @PostMapping("/api/alarm/{alarmId}")
     public AlarmResponseDto alarmReadCheck(
