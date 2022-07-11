@@ -12,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 public class Alarm extends Timestamped {
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
