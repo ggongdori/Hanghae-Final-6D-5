@@ -20,6 +20,7 @@ public class AlarmService {
     private final RedisTemplate redisTemplate;
     private final ChannelTopic channelTopic;
 
+
     public AlarmService(AlarmRepository alarmRepository, UserRepository userRepository, RedisTemplate redisTemplate, ChannelTopic channelTopic) {
         this.alarmRepository = alarmRepository;
         this.userRepository = userRepository;
