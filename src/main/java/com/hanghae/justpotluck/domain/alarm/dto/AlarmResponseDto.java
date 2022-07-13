@@ -11,6 +11,7 @@ import lombok.*;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AlarmResponseDto {
 
+
     private Long alarmId;
     private String type;
     private String message;
