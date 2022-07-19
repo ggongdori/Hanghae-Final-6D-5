@@ -14,8 +14,5 @@ public class BookmarkService {
 //    @Transactional
 //    public void bookmark(Long boardId, String email) {
 //        User user = userRepository.findByEmail(email).orElseThrow(
-//                () -> new IllegalArgumentException("해당 사용자가 없습니다.")
-//        );
-//        bookmarkRepository.bookmark(boardId, user.getId());
-//    }
+
 }
