@@ -11,8 +11,4 @@ public class BookmarkService {
     private final UserRepository userRepository;
     private final BookmarkRepository bookmarkRepository;
 
-//    @Transactional
-//    public void bookmark(Long boardId, String email) {
-//        User user = userRepository.findByEmail(email).orElseThrow(
-
 }
